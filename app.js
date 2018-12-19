@@ -2,11 +2,13 @@ var student = {
   name: "",
   type: "student"
 };
-
+//DOMContentLoaded will initialized contentLoaaded, all html
+// has been processed
 document.addEventListener('DOMContentLoaded', contentLoaded);
 
 function contentLoaded(event) {
   document.getElementById('name').addEventListener("keyup", keyUp);
+  //keyup calculates numeric output
 }
 
 function keyUp(event) {
@@ -20,7 +22,7 @@ function calculateNumericOutput() {
   for (var i = 0; i < student.name.length; i++) {
     totalNameValue += student.name.charCodeAt(i);
   }
-
+//Tight cohesion
   // Insert result into page
   var output = "Total Numeric value of person's name is " + totalNameValue;
   document.getElementById('output').innerText = output;
